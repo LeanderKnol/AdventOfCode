@@ -1,4 +1,4 @@
-﻿using AdventOfCode.Day10;
+﻿using AdventOfCode.Day13;
 using System;
 
 namespace AdventOfCode
@@ -7,8 +7,9 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(DayTen.ExecuteFirst());
-            Console.WriteLine(DayTen.ExecuteSecond());
+            Console.WriteLine(DayThirteen.ExecuteFirst());
+            Console.WriteLine(DayThirteen.ExecuteSecondB());
+            Console.WriteLine(DayThirteen.ExecuteSecond());
         }
     }
 }
