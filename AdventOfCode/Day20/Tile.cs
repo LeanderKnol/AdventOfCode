@@ -8,25 +8,32 @@ namespace AdventOfCode.Day20
         public int Number { get; set; }
         public List<string> Image { get; set; } = new List<string>();
 
+        public string Top => Image.GetSide(0, 9, 0, 0);
+        public string Bottom => Image.GetSide(0, 9, 0, 0);
+        public string Left => Image.GetSide(0, 0, 0, 9);
+        public string Right => Image.GetSide(9, 9, 0, 9);
+
+
+        public void Rotate()
+        {
+            Image.Rotate(10);
+        }
+
         public new List<string> GetSides()
         {
             var sides = new List<string>();
 
-            var top = Image.GetSide(0, 9, 0, 0);
-            sides.Add(top);
-            sides.Add(Reverse(top));
+            sides.Add(Top);
+            sides.Add(Reverse(Top));
 
-            var bottom = Image.GetSide(0, 9, 9, 9);
-            sides.Add(bottom);
-            sides.Add(Reverse(bottom));
+            sides.Add(Bottom);
+            sides.Add(Reverse(Bottom));
 
-            var left = Image.GetSide(0, 0, 0, 9);
-            sides.Add(left);
-            sides.Add(Reverse(left));
+            sides.Add(Left);
+            sides.Add(Reverse(Left));
 
-            var right = Image.GetSide(9, 9, 0, 9);
-            sides.Add(right);
-            sides.Add(Reverse(right));
+            sides.Add(Right);
+            sides.Add(Reverse(Right));
 
 
             string Reverse(string input)

@@ -42,5 +42,23 @@ namespace AdventOfCode
             }
             return result.ToString();
         }
+
+        public static List<string> Rotate(this List<string> source, int length)
+        {
+
+            var rotated = new List<string>();
+
+            for (var y = 0; y < length; y++)
+            {
+                var sb = new StringBuilder();
+                for (var x = 0; x < length; x++)
+                {
+                    sb.Append(source[length - x - 1][y]);
+                }
+                rotated[y] = sb.ToString();
+            }
+
+            return rotated;
+        }
     }
 }
