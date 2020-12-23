@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AdventOfCode
 {
@@ -28,19 +26,6 @@ namespace AdventOfCode
         public static long BinaryToNumber(this string binaryString)
         {
             return Convert.ToInt64(binaryString, 2);
-        }
-
-        public static string GetSide(this List<string> grid, int xStart, int xEnd, int yStart, int yEnd)
-        {
-            var result = new StringBuilder();
-            for (var i = xStart; i <= xEnd; i++)
-            {
-                for (var j = yStart; j <= yEnd; j++)
-                {
-                    result.Append(grid[i][j]);
-                }
-            }
-            return result.ToString();
         }
     }
 }

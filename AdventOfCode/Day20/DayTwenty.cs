@@ -119,7 +119,10 @@ namespace AdventOfCode.Day20
             }
 
             //String edges
-            var strippedImage = new List<string>();
+            var strippedImage = new Tile
+            {
+                TileSize = 96
+            };
             foreach (var row in image)
             {
                 var stringedFragmentRow = new string[8];
@@ -129,13 +132,84 @@ namespace AdventOfCode.Day20
                     {
                         stringedFragmentRow[i - 1] += tile.Image[i][1..9];
                     }
-
-
                 }
-                strippedImage.AddRange(stringedFragmentRow);
+                strippedImage.Image.AddRange(stringedFragmentRow);
             }
 
+            var monster = new[]{
+                "                  # ",
+                "#    ##    ##    ###",
+                " #  #  #  #  #  #   "
+            };
+
+            var totalMonsters = 0;
+            CheckRotating();
+
+            if (totalMonsters == 0)
+            {
+                strippedImage.FlipHorizontal();
+                CheckRotating();
+            }
+
+            if (totalMonsters == 0)
+            {
+                strippedImage.FlipVertical();
+                CheckRotating();
+            }
+
+            void CheckRotating()
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    totalMonsters = SearchMonster(strippedImage.Image, monster);
+                    if (totalMonsters > 0)
+                    {
+                        break;
+                    }
+
+                    strippedImage.Rotate();
+                }
+            }
+
+            if (totalMonsters > 0)
+            {
+                var totalHashes = strippedImage.Image.Sum(row => row.Count(ch => ch == '#'));
+                var monsterHashes = string.Join("\n", monster).Count(ch => ch == '#');
+                return (totalHashes - totalMonsters * monsterHashes).ToString();
+            }
             return string.Empty;
+        }
+
+        private static int SearchMonster(List<string> strippedImage, string[] monster)
+        {
+            var totalMonsters = 0;
+
+            for (var y = 0; y < strippedImage.Count - monster.Length; y++)
+            {
+                for (var x = 0; x < strippedImage.First().Length - monster[0].Length; x++)
+                {
+                    if (MatchMonster())
+                    {
+                        totalMonsters++;
+                    }
+
+                    bool MatchMonster()
+                    {
+                        for (var mY = 0; mY < monster.Length; mY++)
+                            for (var mX = 0; mX < monster[0].Length; mX++)
+                            {
+                                if (monster[mY][mX] == '#' && strippedImage[y + mY][x + mX] != '#')
+                                {
+                                    return false;
+                                }
+                            }
+
+                        return true;
+                    }
+                }
+            }
+
+            return totalMonsters;
         }
 
         private static bool FixOrientation(Tile tile, string top, string left)
@@ -170,27 +244,6 @@ namespace AdventOfCode.Day20
                 }
             }
         }
-
-        private static int DetermineMatchingSides(int x, int y, int sideSize)
-        {
-            var machingSides = 8;
-            if (x == 0 || y == 0)
-            {
-                machingSides -= 2;
-            }
-
-            if (x == (sideSize - 1) || y == (sideSize - 1))
-            {
-                machingSides -= 2;
-                if (x == (sideSize - 1) && y == (sideSize - 1))
-                {
-                    machingSides -= 2;
-                }
-            }
-
-            return machingSides;
-        }
-
 
         private static List<Tile> GetInputArray()
         {

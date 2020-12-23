@@ -6,15 +6,15 @@ namespace AdventOfCode.Day20
 {
     public class Tile
     {
-        public const int TileSize = 10;
+        public int TileSize { get; set; } = 10;
 
         public int Number { get; set; }
         public List<string> Image { get; set; } = new List<string>();
 
-        public string Top => Image.GetSide(0, 9, 0, 0);
-        public string Bottom => Image.GetSide(0, 9, 9, 9);
-        public string Left => Image.GetSide(0, 0, 0, 9);
-        public string Right => Image.GetSide(9, 9, 0, 9);
+        public string Top => GetSide(0, 9, 0, 0);
+        public string Bottom => GetSide(0, 9, 9, 9);
+        public string Left => GetSide(0, 0, 0, 9);
+        public string Right => GetSide(9, 9, 0, 9);
 
         public List<string> GetSides()
         {
@@ -39,6 +39,18 @@ namespace AdventOfCode.Day20
             }
 
             return sides;
+        }
+        private string GetSide(int xStart, int xEnd, int yStart, int yEnd)
+        {
+            var result = new StringBuilder();
+            for (var j = yStart; j <= yEnd; j++)
+            {
+                for (var i = xStart; i <= xEnd; i++)
+                {
+                    result.Append(Image[j][i]);
+                }
+            }
+            return result.ToString();
         }
 
         public void FlipHorizontal()
