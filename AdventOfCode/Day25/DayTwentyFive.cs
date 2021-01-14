@@ -8,16 +8,6 @@ namespace AdventOfCode.Day25
 {
     public static class DayTwentyFive
     {
-        private static readonly Dictionary<string, (double X, double Y)> Directions = new Dictionary<string, (double, double)>
-        {
-            {"e", (1,0) },
-            {"w", (-1,0) },
-            { "se", (0.5, -1) },
-            { "sw", (-0.5, -1) },
-            { "nw", (-0.5, 1) },
-            { "ne", (0.5, 1) },
-        };
-
         public static string ExecuteFirst()
         {
             var lines = GetInputArray();
@@ -32,14 +22,12 @@ namespace AdventOfCode.Day25
             return string.Empty;
         }
 
-
-
         private static List<BigInteger> GetInputArray()
         {
             return File.ReadAllLines("Day25/input.txt").Select(l => BigInteger.Parse(l)).ToList();
         }
 
-        public static BigInteger GetEncryptionKey(
+        private static BigInteger GetEncryptionKey(
            BigInteger publicKeyDoor,
            BigInteger publicKeyCard)
         {
@@ -57,7 +45,7 @@ namespace AdventOfCode.Day25
             return encryptionKeyCard;
         }
 
-        public static int GetLoopSizeFromPublicKey(BigInteger publicKey)
+        private static int GetLoopSizeFromPublicKey(BigInteger publicKey)
         {
             int result = 1;
             BigInteger currentTransform = 1;
@@ -73,7 +61,7 @@ namespace AdventOfCode.Day25
             return result;
         }
 
-        public static BigInteger GetTransformedSubjectNumber(int loopSize, BigInteger subjectNumber)
+        private static BigInteger GetTransformedSubjectNumber(int loopSize, BigInteger subjectNumber)
         {
             BigInteger result = 1;
             for (int i = 0; i < loopSize; i++)
