@@ -95,7 +95,6 @@ namespace AdventOfCode.Day24
             {
                 return 'B';
             }
-            //false = 'B'
 
             return !exists ? 'W' : situation[tile];
         }
