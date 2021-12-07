@@ -100,16 +100,18 @@
 	<None Update="2021\Day4\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
+	<None Update="2021\Day6\ExampleInput.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="2021\Day6\Input.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
 	<None Update="2021\Day5\ExampleInput.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
 	<None Update="2021\Day5\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="2021\" />
   </ItemGroup>
 
 </Project>
