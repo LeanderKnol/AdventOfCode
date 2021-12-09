@@ -10,8 +10,8 @@ namespace AdventOfCode._2021.Day8
 
         public Day8()
         {
-            var input = Helpers.ReadInputArray<string>("2021/Day8/Input.txt");
-            //var input = Helpers.ReadInputArray<string>("2021/Day8/ExampleInput.txt");
+            var input = Helpers.ReadInputArray<string>("2021/Day9/Input.txt");
+            //var input = Helpers.ReadInputArray<string>("2021/Day9/ExampleInput.txt");
 
             foreach (var entry in input)
             {
@@ -49,7 +49,11 @@ namespace AdventOfCode._2021.Day8
                 CalculateNineZeroSix(entry);
                 CalculateTwoThreeFive(entry);
 
-                var result = entry.Output.Aggregate(string.Empty, (current, output) => current + entry.Signals[output].Value);
+                var result = string.Empty;
+                foreach (var output in entry.Output)
+                {
+                    result += entry.Signals[output].Value;
+                }
 
                 total += int.Parse(result);
             }
