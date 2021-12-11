@@ -1,4 +1,5 @@
 ﻿using System;
+using AdventOfCode.Instrumentation;
 
 namespace AdventOfCode._2021.Day1
 {

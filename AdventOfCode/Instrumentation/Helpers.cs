@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 
-namespace AdventOfCode
+namespace AdventOfCode.Instrumentation
 {
     public static class Helpers
     {
