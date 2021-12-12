@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventOfCode._2021.Day8
+namespace AdventOfCode._2021.Day08
 {
     internal class Entry
     {

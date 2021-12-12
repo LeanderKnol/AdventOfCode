@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using AdventOfCode.Instrumentation;
 
-namespace AdventOfCode._2021.Day5
+namespace AdventOfCode._2021.Day05
 {
-    public class Day5
+    public class Day05
     {
         private readonly List<string> _input;
-        private Dictionary<(int, int), int> _map;
-        public Day5()
+        private Dictionary<Coordinate2D, int> _map;
+        public Day05()
         {
-            _input = Helpers.ReadInputArray<string>("2021/Day5/Input.txt").ToList();
-            //_input = Helpers.ReadInputArray<string>("2021/Day5/ExampleInput.txt").ToList();
+            _input = Helpers.ReadInputArray<string>("2021/Day05/Input.txt").ToList();
+            //_input = Helpers.ReadInputArray<string>("2021/Day05/ExampleInput.txt").ToList();
 
         }
 

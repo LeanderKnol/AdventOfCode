@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using AdventOfCode.Instrumentation;
 
-namespace AdventOfCode._2021.Day8
+namespace AdventOfCode._2021.Day08
 {
-    public class Day8
+    public class Day08
     {
         private readonly List<Entry> _entries = new();
 
-        public Day8()
+        public Day08()
         {
-            var input = Helpers.ReadInputArray<string>("2021/Day9/Input.txt");
-            //var input = Helpers.ReadInputArray<string>("2021/Day9/ExampleInput.txt");
+            var input = Helpers.ReadInputArray<string>("2021/Day08/Input.txt");
+            //var input = Helpers.ReadInputArray<string>("2021/Day08/ExampleInput.txt");
 
             foreach (var entry in input)
             {

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using AdventOfCode.Instrumentation;
 
-namespace AdventOfCode._2021.Day7
+namespace AdventOfCode._2021.Day07
 {
-    public class Day7
+    public class Day07
     {
         private readonly List<int> _input;
-        public Day7()
+        public Day07()
         {
-            //_input = Helpers.ReadInputArray<string>("2021/Day7/ExampleInput.txt").First().Split(",").Select(i => int.Parse(i)).ToList();
-            _input = Helpers.ReadInputArray<string>("2021/Day7/Input.txt").First().Split(",").Select(i => int.Parse(i)).ToList();
+            //_input = Helpers.ReadInputArray<string>("2021/Day07/ExampleInput.txt").First().Split(",").Select(i => int.Parse(i)).ToList();
+            _input = Helpers.ReadInputArray<string>("2021/Day07/Input.txt").First().Split(",").Select(int.Parse).ToList();
         }
 
         public void Part1()

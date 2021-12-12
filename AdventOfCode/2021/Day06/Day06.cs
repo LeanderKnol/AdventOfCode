@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 using AdventOfCode.Instrumentation;
 
-namespace AdventOfCode._2021.Day6
+namespace AdventOfCode._2021.Day06
 {
-    public class Day6
+    public class Day06
     {
         private List<int> _input;
         private long[] _days;
-        public Day6()
+        public Day06()
         {
-            //_input = Helpers.ReadInputArray<string>("2021/Day6/ExampleInput.txt").First().Split(",").Select(i => int.Parse(i)).ToList();
-            _input = Helpers.ReadInputArray<string>("2021/Day6/Input.txt").First().Split(",").Select(i => int.Parse(i)).ToList();
+            //_input = Helpers.ReadInputArray<string>("2021/Day06/ExampleInput.txt").First().Split(",").Select(i => int.Parse(i)).ToList();
+            _input = Helpers.ReadInputArray<string>("2021/Day06/Input.txt").First().Split(",").Select(i => int.Parse(i)).ToList();
         }
 
         public void Part1()

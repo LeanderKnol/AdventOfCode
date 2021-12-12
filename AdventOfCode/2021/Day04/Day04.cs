@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace AdventOfCode._2021.Day4
+namespace AdventOfCode._2021.Day04
 {
-    public class Day4
+    public class Day04
     {
         private BingoCard _lastCard;
         private bool _firstDone;
         private bool _lastDone;
         private readonly List<BingoCard> _bingoCards = new();
         private int[] _checkNumbers;
-        public Day4()
+        public Day04()
         {
-            //ReadInput("2021/Day4/ExampleInput.txt");
-            ReadInput("2021/Day4/Input.txt");
+            //ReadInput("2021/Day04/ExampleInput.txt");
+            ReadInput("2021/Day04/Input.txt");
 
         }
 

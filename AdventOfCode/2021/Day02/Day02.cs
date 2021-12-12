@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using AdventOfCode.Instrumentation;
 
-namespace AdventOfCode._2021.Day2
+namespace AdventOfCode._2021.Day02
 {
-    public class Day2
+    public class Day02
     {
-        private readonly List<KeyValuePair<string, int>> _instructions = new List<KeyValuePair<string, int>>();
-        public Day2()
+        private readonly List<KeyValuePair<string, int>> _instructions = new();
+        public Day02()
         {
-            var input = Helpers.ReadInputArray<string>("2021/Day2/Input.txt");
-            //var input = Helpers.ReadInputArray<string>("2021/Day2/ExampleInput.txt");
+            var input = Helpers.ReadInputArray<string>("2021/Day02/Input.txt");
+            //var input = Helpers.ReadInputArray<string>("2021/Day02/ExampleInput.txt");
             foreach (var value in input)
             {
                 var components = value.Split(" ");

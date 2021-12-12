@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using AdventOfCode.Instrumentation;
 
-namespace AdventOfCode._2021.Day9
-
+namespace AdventOfCode._2021.Day09
 {
-    public class Day9
+    public class Day09
     {
         private readonly int[][] _map;
         private readonly List<(int x, int y)> _offsets = new() { (0, 1), (1, 0), (0, -1), (-1, 0) };
-        public Day9()
+        public Day09()
         {
-            var input = Helpers.ReadInputArray<string>("2021/Day9/Input.txt");
-            //var input = Helpers.ReadInputArray<string>("2021/Day9/ExampleInput.txt");
+            var input = Helpers.ReadInputArray<string>("2021/Day09/Input.txt");
+            //var input = Helpers.ReadInputArray<string>("2021/Day09/ExampleInput.txt");
 
             _map = new int[input.Length][];
             for (int i = 0; i < input.Length; i++)

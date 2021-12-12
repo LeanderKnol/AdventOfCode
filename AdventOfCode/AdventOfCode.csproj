@@ -76,34 +76,40 @@
 	<None Update="2020\Day3\input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
+	<None Update="2021\Day12\ExampleInput.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="2021\Day12\Input.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
 	<None Update="2021\Day11\ExampleInput.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
 	<None Update="2021\Day11\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day1\ExampleInput.txt">
+	<None Update="2021\Day01\ExampleInput.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day1\Input.txt">
+	<None Update="2021\Day01\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day2\ExampleInput.txt">
+	<None Update="2021\Day02\ExampleInput.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day2\Input.txt">
+	<None Update="2021\Day02\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day3\ExampleInput.txt">
+	<None Update="2021\Day03\ExampleInput.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day3\Input.txt">
+	<None Update="2021\Day03\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day4\ExampleInput.txt">
+	<None Update="2021\Day04\ExampleInput.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day4\Input.txt">
+	<None Update="2021\Day04\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
 	<None Update="2021\Day10\ExampleInput.txt">
@@ -112,34 +118,34 @@
 	<None Update="2021\Day10\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day9\ExampleInput.txt">
+	<None Update="2021\Day09\ExampleInput.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day9\Input.txt">
+	<None Update="2021\Day09\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day8\ExampleInput.txt">
+	<None Update="2021\Day08\ExampleInput.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day8\Input.txt">
+	<None Update="2021\Day08\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day7\ExampleInput.txt">
+	<None Update="2021\Day07\ExampleInput.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day7\Input.txt">
+	<None Update="2021\Day07\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day6\ExampleInput.txt">
+	<None Update="2021\Day06\ExampleInput.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day6\Input.txt">
+	<None Update="2021\Day06\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day5\ExampleInput.txt">
+	<None Update="2021\Day05\ExampleInput.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
-	<None Update="2021\Day5\Input.txt">
+	<None Update="2021\Day05\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
   </ItemGroup>

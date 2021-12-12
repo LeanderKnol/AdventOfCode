@@ -1,12 +1,12 @@
 ﻿using System;
 using AdventOfCode.Instrumentation;
 
-namespace AdventOfCode._2021.Day1
+namespace AdventOfCode._2021.Day01
 {
-    public class Day1
+    public class Day01
     {
-        private int[] input;
-        public Day1()
+        private readonly int[] input;
+        public Day01()
         {
             input = Helpers.ReadInputArray<int>("2021/Day1/Input.txt");
             //input = Helpers.ReadInputArray<int>("2021/Day1/ExampleInput.txt");
