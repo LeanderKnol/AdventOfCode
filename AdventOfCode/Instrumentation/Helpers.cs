@@ -7,6 +7,11 @@ namespace AdventOfCode.Instrumentation
 {
     public static class Helpers
     {
+        public static int ToInt(this string input)
+        {
+            return int.Parse(input);
+        }
+
         public static string ToBinaryString(this int number, int length)
         {
             var bin = Convert.ToString(number, 2);
