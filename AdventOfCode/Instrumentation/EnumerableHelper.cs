@@ -42,6 +42,18 @@ namespace AdventOfCode.Instrumentation
             }
         }
 
+        public static void SafeIncrement<TKey>(this Dictionary<TKey, int> dictionary, TKey key, int value)
+        {
+            if (dictionary.ContainsKey(key))
+            {
+                dictionary[key] += value;
+            }
+            else
+            {
+                dictionary.Add(key, value);
+            }
+        }
+
         public static void SafeUpdate<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TKey key, TValue value)
         {
             if (dictionary.ContainsKey(key))

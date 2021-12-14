@@ -71,11 +71,7 @@ namespace AdventOfCode._2021.Day09
                         lowestNeighbor = GetLowestNeighbor(currentX, currentY);
                     }
 
-                    if (!basins.ContainsKey((currentX, currentY)))
-                    {
-                        basins.Add((currentX, currentY), 0);
-                    }
-                    basins[(currentX, currentY)]++;
+                    basins.SafeIncrement((currentX, currentY),1);
                 }
             }
 
