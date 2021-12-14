@@ -29,5 +29,29 @@ namespace AdventOfCode.Instrumentation
                 .Select(n => Convert.ToInt32(n))
                 .ToArray();
         }
+
+        public static void SafeIncrement<TKey>(this Dictionary<TKey,long> dictionary, TKey key, long value)
+        {
+            if (dictionary.ContainsKey(key))
+            {
+                dictionary[key] += value;
+            }
+            else
+            {
+                dictionary.Add(key, value);
+            }
+        }
+
+        public static void SafeUpdate<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TKey key, TValue value)
+        {
+            if (dictionary.ContainsKey(key))
+            {
+                dictionary[key] = value;
+            }
+            else
+            {
+                dictionary.Add(key, value);
+            }
+        }
     }
 }
