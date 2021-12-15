@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using AdventOfCode.Instrumentation;
-using MoreLinq;
 
 namespace AdventOfCode._2021.Day14
 {

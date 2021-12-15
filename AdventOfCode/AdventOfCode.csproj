@@ -7,11 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ArrayDeconstructors.Source" Version="1.0.3">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="morelinq" Version="3.3.2" />
+    <PackageReference Include="Dijkstra.NET" Version="1.2.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -82,6 +78,12 @@
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
 	<None Update="2020\Day3\input.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="2021\Day15\ExampleInput.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="2021\Day15\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
 	<None Update="2021\Day14\ExampleInput.txt">
