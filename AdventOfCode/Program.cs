@@ -1,6 +1,7 @@
 ﻿using AdventOfCode._2021.Day09;
 using AdventOfCode._2021.Day14;
 using AdventOfCode._2021.Day15;
+using AdventOfCode._2021.Day16;
 
 namespace AdventOfCode
 {
@@ -8,9 +9,9 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            var day15 = new Day15();
-            day15.Part1();
-            day15.Part2();
+            var day16 = new Day16();
+            day16.Part1();
+            day16.Part2();
         }
     }
 }

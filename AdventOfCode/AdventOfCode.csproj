@@ -80,6 +80,21 @@
 	<None Update="2020\Day3\input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
+	<None Update="2021\Day16\ExampleInput.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="2021\Day16\Operator2ExampleInput.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="2021\Day16\OperatorExampleInput.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="2021\Day16\LitteralExampleInput.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="2021\Day16\Input.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
 	<None Update="2021\Day15\ExampleInput.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
