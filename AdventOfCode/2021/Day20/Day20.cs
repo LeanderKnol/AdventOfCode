@@ -116,7 +116,6 @@ namespace AdventOfCode._2021.Day20
 
         private void Print()
         {
-            return;
             var minX = _processingImage.Min(o => o.Key.X);
             var minY = _processingImage.Min(o => o.Key.Y);
 
