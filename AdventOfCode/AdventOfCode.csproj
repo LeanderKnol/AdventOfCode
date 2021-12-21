@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Dijkstra.NET" Version="1.2.1" />
+    <PackageReference Include="morelinq" Version="3.3.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -78,6 +79,24 @@
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
 	<None Update="2020\Day3\input.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="2021\Day20\ExampleInput.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="2021\Day20\Input.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="2021\Day19\ExampleInput.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="2021\Day19\Input.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="2021\Day18\ExampleInput.txt">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	<None Update="2021\Day18\Input.txt">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</None>
 	<None Update="2021\Day17\ExampleInput.txt">

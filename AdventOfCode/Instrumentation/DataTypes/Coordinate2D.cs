@@ -1,25 +1,25 @@
 ﻿using System;
 
-namespace AdventOfCode.Instrumentation
+namespace AdventOfCode.Instrumentation.DataTypes
 {
     public class Coordinate2D
     {
         //public static readonly Coordinate2D origin = new(0, 0);
         //public static readonly Coordinate2D unit_x = new(1, 0);
         //public static readonly Coordinate2D unit_y = new(0, 1);
-        public readonly int x;
-        public readonly int y;
+        public readonly int X;
+        public readonly int Y;
 
         public Coordinate2D(int x, int y)
         {
-            this.x = x;
-            this.y = y;
+            this.X = x;
+            this.Y = y;
         }
 
         public Coordinate2D((int x, int y) coordinate)
         {
-            this.x = coordinate.x;
-            this.y = coordinate.y;
+            this.X = coordinate.x;
+            this.Y = coordinate.y;
         }
 
         public Coordinate2D RotateCW(int degrees, Coordinate2D center)
@@ -41,7 +41,7 @@ namespace AdventOfCode.Instrumentation
 
         private Coordinate2D RotateCW()
         {
-            return new Coordinate2D(y, -x);
+            return new Coordinate2D(Y, -X);
         }
 
         public Coordinate2D RotateCCW(int degrees, Coordinate2D center)
@@ -63,25 +63,25 @@ namespace AdventOfCode.Instrumentation
 
         private Coordinate2D RotateCCW()
         {
-            return new Coordinate2D(-y, x);
+            return new Coordinate2D(-Y, X);
         }
 
         public static Coordinate2D operator +(Coordinate2D a) => a;
-        public static Coordinate2D operator +(Coordinate2D a, Coordinate2D b) => new(a.x + b.x, a.y + b.y);
-        public static Coordinate2D operator -(Coordinate2D a) => new(-a.x, -a.y);
+        public static Coordinate2D operator +(Coordinate2D a, Coordinate2D b) => new(a.X + b.X, a.Y + b.Y);
+        public static Coordinate2D operator -(Coordinate2D a) => new(-a.X, -a.Y);
         public static Coordinate2D operator -(Coordinate2D a, Coordinate2D b) => a + (-b);
-        public static Coordinate2D operator *(int scale, Coordinate2D a) => new(scale * a.x, scale * a.y);
-        public static bool operator ==(Coordinate2D a, Coordinate2D b) => (a.x == b.x && a.y == b.y);
-        public static bool operator !=(Coordinate2D a, Coordinate2D b) => (a.x != b.x || a.y != b.y);
+        public static Coordinate2D operator *(int scale, Coordinate2D a) => new(scale * a.X, scale * a.Y);
+        public static bool operator ==(Coordinate2D a, Coordinate2D b) => (a.X == b.X && a.Y == b.Y);
+        public static bool operator !=(Coordinate2D a, Coordinate2D b) => (a.X != b.X || a.Y != b.Y);
 
         public static implicit operator Coordinate2D((int x, int y) a) => new(a.x, a.y);
 
-        public static implicit operator (int x, int y)(Coordinate2D a) => (a.x, a.y);
+        public static implicit operator (int x, int y)(Coordinate2D a) => (a.X, a.Y);
 
         public int ManDistance(Coordinate2D other)
         {
-            int x = Math.Abs(this.x - other.x);
-            int y = Math.Abs(this.y - other.y);
+            int x = Math.Abs(this.X - other.X);
+            int y = Math.Abs(this.Y - other.Y);
             return x + y;
         }
         public override bool Equals(object obj)
@@ -93,14 +93,43 @@ namespace AdventOfCode.Instrumentation
 
         public override int GetHashCode()
         {
-            return (100 * x + y).GetHashCode();
+            return (100 * X + Y).GetHashCode();
         }
 
         public override string ToString()
         {
-            return $"({x}, {y})";
+            return $"({X}, {Y})";
         }
 
+        public void Deconstruct(out int x, out int y)
+        {
+            x = X;
+            y = Y;
+        }
+
+        public static Coordinate2D[] GetNeighbors()
+        {
+            return Neighbors2D;
+        }
+
+        private static readonly Coordinate2D[] Neighbors2D =
+        {
+            (-1,-1),(-1,0),(-1,1),
+            (0,-1),        (0,1),
+            (1,-1), (1,0), (1,1),
+        };
+
+        public static Coordinate2D[] GetTotalSquare()
+        {
+            return TotalSquare2D;
+        }
+
+        private static readonly Coordinate2D[] TotalSquare2D =
+        {
+            (-1,-1),(0,-1),(1,-1),
+            (-1,0), (0,0), (1,0),
+            (-1,1), (0,1), (1,1)
+        };
     }
 
 }

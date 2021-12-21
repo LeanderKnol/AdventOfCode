@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using AdventOfCode.Instrumentation;
+using AdventOfCode.Instrumentation.DataTypes;
 
 namespace AdventOfCode._2021.Day17
 {
@@ -34,13 +35,13 @@ namespace AdventOfCode._2021.Day17
 
                     while (true)
                     {
-                        if (probePosition.y > maxY)
+                        if (probePosition.Y > maxY)
                         {
-                            maxY = probePosition.y;
+                            maxY = probePosition.Y;
                         }
 
-                        if (probePosition.x >= xLimits.min && probePosition.x <= xLimits.max &&
-                            probePosition.y >= yLimits.min && probePosition.y <= yLimits.max)
+                        if (probePosition.X >= xLimits.min && probePosition.X <= xLimits.max &&
+                            probePosition.Y >= yLimits.min && probePosition.Y <= yLimits.max)
                         {
                             _targetsHit++;
                             if (maxY > _maxY)
@@ -50,7 +51,7 @@ namespace AdventOfCode._2021.Day17
                             break;
                         }
 
-                        if (probePosition.x > xLimits.max || probePosition.y < yLimits.min)
+                        if (probePosition.X > xLimits.max || probePosition.Y < yLimits.min)
                         {
                             break;
                         }
@@ -73,8 +74,8 @@ namespace AdventOfCode._2021.Day17
 
         public Coordinate2D Step(Coordinate2D position, int velocityX, int velocityY)
         {
-            var positionX = position.x + velocityX;
-            var positionY = position.y + velocityY;
+            var positionX = position.X + velocityX;
+            var positionY = position.Y + velocityY;
             if (_velocityX > 0)
             {
                 _velocityX--;

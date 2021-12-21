@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using AdventOfCode.Instrumentation;
+using AdventOfCode.Instrumentation.DataTypes;
 
 namespace AdventOfCode._2021.Day13
 {
@@ -38,20 +39,20 @@ namespace AdventOfCode._2021.Day13
 
                 foreach (var coordinate in _grid)
                 {
-                    var x = coordinate.x;
-                    var y = coordinate.y;
+                    var x = coordinate.X;
+                    var y = coordinate.Y;
                     if (fold.type == "x")
                     {
-                        if (coordinate.x >= fold.line)
+                        if (coordinate.X >= fold.line)
                         {
-                            x = (fold.line - (coordinate.x - fold.line));
+                            x = (fold.line - (coordinate.X - fold.line));
                         }
                     }
                     else
                     {
-                        if (coordinate.y >= fold.line)
+                        if (coordinate.Y >= fold.line)
                         {
-                            y = (fold.line - (coordinate.y - fold.line));
+                            y = (fold.line - (coordinate.Y - fold.line));
                         }
                     }
 
@@ -76,8 +77,8 @@ namespace AdventOfCode._2021.Day13
         {
             Run(false);
 
-            var maxX = _grid.Max(c => c.x);
-            var maxY = _grid.Max(c => c.y);
+            var maxX = _grid.Max(c => c.X);
+            var maxY = _grid.Max(c => c.Y);
 
             for (int i = 0; i <= maxY; i++)
             {

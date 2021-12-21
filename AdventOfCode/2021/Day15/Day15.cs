@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using AdventOfCode.Instrumentation;
+using AdventOfCode.Instrumentation.DataTypes;
 using Dijkstra.NET.Graph.Simple;
 using Dijkstra.NET.ShortestPath;
 
@@ -63,8 +64,8 @@ namespace AdventOfCode._2021.Day15
        
         ShortestPathResult GetPath(Dictionary<Coordinate2D, int> cave)
         {
-            int width = cave.Max(c => c.Key.x)+1;
-            int height = cave.Max(c => c.Key.y)+1;
+            int width = cave.Max(c => c.Key.X)+1;
+            int height = cave.Max(c => c.Key.Y)+1;
             var graph = new Graph();
 
             uint[,] nodes = new uint[width, height];

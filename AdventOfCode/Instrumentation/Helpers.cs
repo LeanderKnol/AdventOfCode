@@ -9,7 +9,12 @@ namespace AdventOfCode.Instrumentation
     {
         public static int ToInt(this string input)
         {
-            return int.Parse(input);
+            return int.Parse(input.Trim());
+        }
+
+        public static int ToInt(this char input)
+        {
+            return input.ToString().ToInt();
         }
 
         public static string ToBinaryString(this int number, int length)
